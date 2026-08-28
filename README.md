@@ -266,7 +266,7 @@ Este projeto está sendo desenvolvido com o objetivo de praticar e aprofundar co
 
 ## 👨‍💻 Autor
 
-Desenvolvido por **SEU NOME**.
+Desenvolvido por **GILMAR**.
 
 ---
 
