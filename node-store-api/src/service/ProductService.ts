@@ -16,7 +16,7 @@ export class ProductService {
 
   async findAll({ page = 1, limit = 10 }: PaginationParams) {
     const [products, total] = await this.repository.findAndCount({
-      relations: ["category", "situation"],
+      relations: { category: true, situation: true },
       skip: (page - 1) * limit,
       take: limit,
       order: { id: "DESC" },
@@ -33,7 +33,7 @@ export class ProductService {
   async findById(id: number) {
     return this.repository.findOne({
       where: { id },
-      relations: ["category", "situation"],
+      relations: { category: true, situation: true },
     });
   }
 
