@@ -4,6 +4,7 @@ import { AppDataSource } from "./data-source";
 import { productRoutes } from "./route/product.routes";
 import { productCategoryRoutes } from "./route/productCategory.routes";
 import { productSituationRoutes } from "./route/productSituation.routes";
+import { userRoutes } from "./route/user.routes";
 
 const app = express();
 app.use(cors());
@@ -11,6 +12,7 @@ app.use(express.json());
 app.use(productRoutes);
 app.use(productCategoryRoutes);
 app.use(productSituationRoutes);
+app.use(userRoutes);
 
 app.get("/", (req, res) => {
   res.json({ message: "NodeStore API rodando 🚀" });
